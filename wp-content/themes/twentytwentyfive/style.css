@@ -22,6 +22,17 @@ a {
 	text-decoration-thickness: 1px !important;
 	text-underline-offset: .1em;
 }
+.wp-block-group.alignfull {
+    background-color: #007b5e;
+    margin: 0;             /* loại bỏ khoảng cách bên ngoài */
+    padding: 60px 0;       /* giống section padding trong CSS bạn gửi */
+    width: 100vw;          /* full chiều ngang viewport */
+    max-width: 100%;
+    box-sizing: border-box; /* đảm bảo padding không làm rộng hơn viewport */
+    color: #ffffff;        /* chữ trắng giống footer */
+}
+
+
 
 /* Focus styles */
 :where(.wp-site-blocks *:focus) {
@@ -58,4 +69,41 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 */
 .more-link {
 	display: block;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #007b5e;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.site-footer .footer-social a {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.site-footer .footer-social a:hover {
+    color: #eeeeee;
+    transform: translateY(-5px);
+}
+
+.site-footer .footer-text p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .site-footer {
+        padding: 40px 10px;
+    }
+    .site-footer .footer-social a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
 }
