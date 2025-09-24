@@ -38,24 +38,13 @@
 
 			<div class="wp-block-group">
 				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"}} -->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Test', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'About', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'FAQs', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Authors', 'twentytwentyfive' ); ?>","url":"#"} /-->
+					<!-- Menu footer từ database -->
+    <?php if ($menu_id): ?>
+        <!-- wp:navigation {"ref":<?php echo $menu_id; ?>,"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal","justifyContent":"space-evenly"}} /-->
+    <?php endif; ?>
 				<!-- /wp:navigation -->
 
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"}} -->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Events', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Shop', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Patterns', 'twentytwentyfive' ); ?>","url":"#"} /-->
-
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Themes', 'twentytwentyfive' ); ?>","url":"#"} /-->
-				<!-- /wp:navigation -->
+			
 			</div>
 				<!-- /wp:group -->
 
