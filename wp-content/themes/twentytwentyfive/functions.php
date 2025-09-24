@@ -8,6 +8,20 @@
  * @subpackage Twenty_Twenty_Five
  * @since Twenty Twenty-Five 1.0
  */
+
+
+ function twentytwentyfive_register_footer_widget() {
+    register_sidebar( array(
+        'name'          => __( 'Footer Widget', 'twentytwentyfive' ),
+        'id'            => 'footer-widget',
+        'description'   => __( 'Widgets in this area will be shown in the footer.', 'twentytwentyfive' ),
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'twentytwentyfive_register_footer_widget' );
+
+
 // Adds theme support for post formats.
 if ( ! function_exists( 'twentytwentyfive_post_format_setup' ) ) :
 	/**
