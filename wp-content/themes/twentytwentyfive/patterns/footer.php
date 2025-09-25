@@ -43,11 +43,25 @@
             <!-- wp:navigation {"ref":<?php echo $menu->term_id; ?>,"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal","justifyContent":"center"}} /-->
         <?php endif; ?>
     </div>
+      <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 	<div class="footer-widgets">
-    <?php if ( is_active_sidebar('footer-widget') ) : ?>
-        <?php dynamic_sidebar('footer-widget'); ?>
-    <?php endif; ?>
+    <div class="footer-column">
+        <?php if (is_active_sidebar('footer-1')) : ?>
+            <?php dynamic_sidebar('footer-1'); ?>
+        <?php endif; ?>
+    </div>
+    <div class="footer-column">
+        <?php if (is_active_sidebar('footer-2')) : ?>
+            <?php dynamic_sidebar('footer-2'); ?>
+        <?php endif; ?>
+    </div>
+    <div class="footer-column">
+        <?php if (is_active_sidebar('footer-3')) : ?>
+            <?php dynamic_sidebar('footer-3'); ?>
+        <?php endif; ?>
+    </div>
 </div>
+<!-- /wp:group -->
    
 
     <!-- Footer Text -->
