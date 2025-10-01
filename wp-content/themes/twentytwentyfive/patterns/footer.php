@@ -22,34 +22,25 @@
 <!-- Footer -->
 <section id="footer">
     <div class="container">
-        <div class="row text-center text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-12 col-sm-4 col-md-4">
-               
-                <div class="footer-column ">
-                    <?php if (is_active_sidebar('<i class="fa fa-angle-double-right"></i> footer-1')) : ?>
-                        <?php dynamic_sidebar('footer-1'); ?>
-                    <?php endif; ?>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                
-                <div class="footer-column">
-                    <?php if (is_active_sidebar('footer-2')) : ?>
-                        <?php dynamic_sidebar('footer-2'); ?>
-                    <?php endif; ?>
-                </div>
-
-
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="footer-column">
-                    <?php if (is_active_sidebar('footer-3')) : ?>
-                        <?php dynamic_sidebar('footer-3'); ?>
-                    <?php endif; ?>
-                </div>
-            </div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-auto col-md-auto">
+        <div class="footer-column footer-1">
+            <?php dynamic_sidebar('footer-1'); ?>
         </div>
     </div>
+    <div class="col-xs-12 col-sm-auto col-md-auto">
+        <div class="footer-column footer-2">
+            <?php dynamic_sidebar('footer-2'); ?>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-auto col-md-auto">
+        <div class="footer-column footer-3">
+            <?php dynamic_sidebar('footer-3'); ?>
+        </div>
+    </div>
+</div>
+
+        </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
             <ul class="list-unstyled list-inline social text-center">

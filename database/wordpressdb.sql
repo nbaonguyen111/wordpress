@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `wordpress_581`
 --
-CREATE DATABASE IF NOT EXISTS `wordpressdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `wordpressdb`;
+CREATE DATABASE IF NOT EXISTS `wordpress_581` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wordpress_581`;
 
 -- --------------------------------------------------------
 
