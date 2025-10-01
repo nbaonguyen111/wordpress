@@ -44,6 +44,28 @@ a {
 .wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
 	outline-offset: 0;
 }
+.wp-block-post-title a{
+	color: red;
+	
+}
+.wp-block-post{
+	padding: 30px 30px;
+	border: 1px solid #ccc;
+}
+.wp-block-post-date .date-day{
+	color: blue;
+	font-size: 30px;
+	
+	
+}
+.wp-block-post-featured-image img {
+	transform: scale(1);
+	transition: transform 0.5s ease-in-out;
+}
+
+.wp-block-post-featured-image:hover img {
+	transform: scale(1.1);
+}
 
 /*
  * Progressive enhancement to reduce widows and orphans
