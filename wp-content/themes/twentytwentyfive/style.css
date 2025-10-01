@@ -79,7 +79,7 @@ section .section-title {
 
 }
 #footer .row {
-    justify-content: space-between; 
+    justify-content: space-around; 
 }
 #footer ul li {
     list-style: none;
@@ -141,7 +141,7 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -50px; /* chỉnh riêng cho footer 3 */
+    left: -40px; /* chỉnh riêng cho footer 3 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -243,7 +243,7 @@ section .section-title {
 
 /* Page list */
 #footer ul.wp-block-page-list li a {
-    margin-left: -40px;
+    margin-left: -30px;
 }
 
 @media (max-width:767px){
