@@ -46,22 +46,49 @@ a {
 }
 .wp-block-post-title a{
 	color: red;
+	font-size: 15px;
 	
 }
+
 .wp-block-post{
-	padding: 30px 30px;
-	border: 1px solid #ccc;
+border: gray solid 1px;
+
 }
-.wp-block-post-date .date-day{
+.wp-block-post-excerpt{
+	font-size: 13px;
+}
+.wp-block-post-title {
+	flex: 1; /* title chiếm hết phần còn lại */
+  }
+ 
+.wp-block-post-date {
+	display: flex;
+	flex-direction: column;   /* xếp dọc */
+	align-items: center;      /* căn giữa ngang */
+	
+  }
+  
+  
+  .wp-block-post-date .date-day {
 	color: blue;
-	font-size: 30px;
+	font-size: 25px;
+	font-weight: bold;
 	
-	
-}
+  }
+  
+  .wp-block-post-date .date-year {
+	padding-left: 50px; /* thụt vào bao nhiêu tùy bạn */
+	font-size: 20px;
+  }
+  
 .wp-block-post-featured-image img {
 	transform: scale(1);
 	transition: transform 0.5s ease-in-out;
 }
+.wp-block-post-featured-image img {
+	object-fit: cover;
+}
+
 
 .wp-block-post-featured-image:hover img {
 	transform: scale(1.1);

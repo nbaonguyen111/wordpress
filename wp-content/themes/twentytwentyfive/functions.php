@@ -40,6 +40,8 @@ function custom_footer_widgets_init()
 }
 add_action('widgets_init', 'custom_footer_widgets_init');
 
+
+
 // Adds theme support for post formats.
 if (! function_exists('twentytwentyfive_post_format_setup')) :
 	/**
