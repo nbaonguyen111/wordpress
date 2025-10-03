@@ -68,35 +68,55 @@ a {
 
 
 /* Row chứa date + title */
-.custom-row-date {
+
+.box-date {
     display: flex;
-    align-items: flex-start; /* căn top */
-    justify-content: flex-start; /* căn trái */
-    gap: 16px; /* khoảng cách date và title */
-    flex-wrap: nowrap;
+    align-items: center; /* căn giữa chiều dọc theo ngày */
+    gap: 6px; /* khoảng cách giữa ngày và cột phải */
+    padding: 4px 4px;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
 }
 
-/* Date box */
-.date-box.wp-block-post-date {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 120px;
-    padding: 4px 8px;
-    border-bottom: 1px solid #CBD5E1;
-    border-right: 1px solid #CBD5E1;
-    flex-shrink: 0; /* không bị co khi row hẹp */
-}
-
-/* Ngày lớn bên trái */
-.date-box .date-day {
-    width: 60px;
-    font-size: 2.5rem;
-    font-weight: bold;
+.day-custom {
+    font-size: 40px;
     color: #1D4ED8;
-    text-align: center;
+    font-weight: bold;
     line-height: 1;
-    margin-right: px!important;
+    white-space: nowrap;
+}
+
+.date-right-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa chiều dọc */
+    gap: 2px; /* khoảng cách giữa tháng và năm */
+}
+
+.month-custom {
+    font-size: 14px;
+    color: #6B7280;
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap; /* tránh xuống dòng */
+}
+.month-custom::before{
+    content: "Tháng";
+    margin-right: 2px;
+    display: inline;
+}
+
+.month-custom .month-label {
+    margin-right: 2px;
+}
+
+.year-custom {
+    font-size: 14px;
+    color: #2563EB;
+    font-weight: 500;
+    margin: 0;
+    align-self: center;
+    
 }
 
 
@@ -122,26 +142,8 @@ a {
 }
 
 
-/* Tháng và năm bên phải */
-.date-box .date-month,
-.date-box .date-year {
-    display: block;
-    text-align: center;
-    font-size: 0.875rem;
-    line-height: 1.2;
-}
 
-/* Màu sắc */
-.date-box .date-month {
-    color: #6B7280; /* xám */
-    text-transform: uppercase;
-    margin-bottom: 2px;
-}
 
-.date-box .date-year {
-    color: #2563EB; /* xanh đậm */
-    font-weight: 500;
-}
 
 /* Tiêu đề bài viết */
 .custom-title {
