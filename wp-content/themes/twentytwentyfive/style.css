@@ -19,87 +19,106 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
  * https://github.com/WordPress/gutenberg/issues/42319
  */
 a {
-	text-decoration-thickness: 1px !important;
-	text-underline-offset: .1em;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: .1em;
 }
 
 
 /* Focus styles */
 :where(.wp-site-blocks *:focus) {
-	outline-width: 2px;
-	outline-style: solid;
+    outline-width: 2px;
+    outline-style: solid;
 }
 
 /* Increase the bottom margin on submenus, so that the outline is visible. */
 .wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
-	margin-bottom: 3px;
+    margin-bottom: 3px;
 }
 
 /* Increase the outline offset on the parent menu items, so that the outline does not touch the text. */
 .wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
-	outline-offset: 4px;
+    outline-offset: 4px;
 }
 
 /* Remove outline offset from the submenus, otherwise the outline is visible outside the submenu container. */
 .wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
-	outline-offset: 0;
-}
-.wp-block-post-title a{
-	color: red;
-	font-size: 15px;
-	
+    outline-offset: 0;
 }
 
-.wp-block-post{
-border: gray solid 1px;
+.wp-block-post-title a {
+    color: red;
+    font-size: 15px;
 
 }
-.wp-block-post-excerpt{
-	font-size: 13px;
+
+.wp-block-post {
+    border: gray solid 1px;
+
 }
+
+.wp-block-post-excerpt {
+    font-size: 13px;
+}
+
 .wp-block-post-title {
-	flex: 1; /* title chiếm hết phần còn lại */
-  }
- 
-.wp-block-post-date {
-	display: flex;
-	flex-direction: column;   /* xếp dọc */
-	align-items: center;      /* căn giữa ngang */
-	
-  }
-  
-  
-  .wp-block-post-date .date-day {
-	color: blue;
-	font-size: 25px;
-	font-weight: bold;
-	
-  }
-  
-  .wp-block-post-date .date-year {
-	padding-left: 50px; /* thụt vào bao nhiêu tùy bạn */
-	font-size: 20px;
-  }
-  
-.wp-block-post-featured-image img {
-	transform: scale(1);
-	transition: transform 0.5s ease-in-out;
+    flex: 1;
+    /* title chiếm hết phần còn lại */
 }
+
+.wp-block-post-date {
+    display: flex;
+    flex-direction: column;
+    /* xếp dọc */
+    align-items: center;
+    /* căn giữa ngang */
+
+}
+
+
+.wp-block-post-date .date-day {
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.wp-block-post-date .date-year {
+    padding-left: 50px;
+    /* thụt vào bao nhiêu tùy bạn */
+    font-size: 20px;
+}
+
 .wp-block-post-featured-image img {
-	object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.img-holder figure {
+    overflow: hidden !important;
 }
 
 
 .wp-block-post-featured-image:hover img {
-	transform: scale(1.1);
+    transform: scale(1.1);
+    overflow: hidden;
 }
 
 /*
  * Progressive enhancement to reduce widows and orphans
  * https://github.com/WordPress/gutenberg/issues/55190
  */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
-	text-wrap: pretty;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+caption,
+figcaption,
+p {
+    text-wrap: pretty;
 }
 
 /*
@@ -107,12 +126,13 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
  * https://github.com/WordPress/gutenberg/issues/65934
 */
 .more-link {
-	display: block;
+    display: block;
 }
 
 
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 section {
     padding: 60px 0;
 }
@@ -123,41 +143,49 @@ section .section-title {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
+
 #footer {
     background: #007b5e !important;
 
 }
+
 #footer .row {
-    justify-content: space-between; 
+    justify-content: space-between;
 }
+
 #footer ul li {
     list-style: none;
     position: relative;
-    padding-left: 20px; /* = padding-left của h5 + border-left */
+    padding-left: 20px;
+    /* = padding-left của h5 + border-left */
 }
 
-#footer h5{
-	padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color:#ffffff;
-	
-}
-#footer .footer-widget p strong {
-    display: block;;
+#footer h5 {
     padding-left: 10px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
     color: #ffffff;
-    font-size: 18px; /* giống h5 */
+
+}
+
+#footer .footer-widget p strong {
+    display: block;
+    ;
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    /* giống h5 */
     font-weight: 600;
 }
 
 
 #footer .footer-column ul li {
-    list-style: none; /* ẩn dấu chấm mặc định */
+    list-style: none;
+    /* ẩn dấu chấm mặc định */
     position: relative;
     padding-left: 10px;
 
@@ -168,7 +196,8 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -50px; /* chỉnh riêng cho footer 1 */
+    left: -50px;
+    /* chỉnh riêng cho footer 1 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -179,7 +208,8 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -5px; /* chỉnh riêng cho footer 2 */
+    left: -5px;
+    /* chỉnh riêng cho footer 2 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -190,7 +220,8 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -50px; /* chỉnh riêng cho footer 3 */
+    left: -50px;
+    /* chỉnh riêng cho footer 3 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -204,90 +235,103 @@ section .section-title {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-#footer ul.social li{
-	padding: 3px 0;
+
+#footer ul.social li {
+    padding: 3px 0;
 
 }
+
 #footer ul.social li a i {
-    margin-right:5px;
-	font-size:25px;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+    margin-right: 5px;
+    font-size: 25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
 }
+
 #footer ul.social li:hover a i {
-	font-size:30px;
-	margin-top:-10px;
+    font-size: 30px;
+    margin-top: -10px;
 }
+
 #footer ul.social li a,
 
-#footer ul.wp-block-categories-list li a{
-	color:#ffffff;
-	
-}
-#footer ul.social li a:hover{
-	color:#eeeeee;
-}
-#footer ul.wp-block-categories-list li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+#footer ul.wp-block-categories-list li a {
+    color: #ffffff;
+
 }
 
-#footer ul.wp-block-page-list li a{
-	color:#ffffff;
+#footer ul.social li a:hover {
+    color: #eeeeee;
 }
 
-#footer ul.wp-block-page-list li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+#footer ul.wp-block-categories-list li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.wp-block-page-list li a {
+    color: #ffffff;
+}
+
+#footer ul.wp-block-page-list li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
 }
 
 
 
-#footer ul.wp-block-latest-posts__list li a{
-	color:#ffffff;
+#footer ul.wp-block-latest-posts__list li a {
+    color: #ffffff;
 }
 
-#footer ul.wp-block-latest-posts__list li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+#footer ul.wp-block-latest-posts__list li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
 }
-#footer ul.wp-block-categories-list li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
+
+#footer ul.wp-block-categories-list li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
 }
-#footer ul.wp-block-page-list li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
+
+#footer ul.wp-block-page-list li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
 }
-#footer ul.wp-block-latest-posts__list li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
+
+#footer ul.wp-block-latest-posts__list li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
 }
-#footer ul.wp-block-latest-posts__list li a i{
-	margin-right: 5px;
+
+#footer ul.wp-block-latest-posts__list li a i {
+    margin-right: 5px;
 }
+
 #footer ul.wp-block-latest-posts__list li:hover a i {
     font-weight: 700;
 }
 
 /* Category list */
 #footer ul.wp-block-categories-list li a {
-    margin-left: -40px;  /* chỉnh thụt lề trái */
+    margin-left: -40px;
+    /* chỉnh thụt lề trái */
 }
 
 /* Latest posts */
 #footer ul.wp-block-latest-posts__list li a {
-    margin-left: 10px; /* chỉnh khác nếu cần */
+    margin-left: 10px;
+    /* chỉnh khác nếu cần */
 }
 
 /* Page list */
@@ -295,11 +339,11 @@ section .section-title {
     margin-left: -40px;
 }
 
-@media (max-width:767px){
-	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
+@media (max-width:767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
