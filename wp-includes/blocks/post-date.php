@@ -35,7 +35,7 @@ function render_block_core_post_date( $attributes, $content, $block ) {
 		'<div %1$s>
 			<time datetime="%2$s">
 				<span class="date-day">%3$s</span>
-				<span class="date-month">Tháng %4$s</span><br>
+				<span class="date-month">Tháng %4$s</span>
 				<span class="date-year">%5$s</span>
 			</time>
 		</div>',

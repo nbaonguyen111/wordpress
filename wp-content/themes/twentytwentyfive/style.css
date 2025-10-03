@@ -46,8 +46,8 @@ a {
 }
 
 .wp-block-post-title a {
-    color: red;
-    font-size: 15px;
+    color: gray;
+    font-size: 20px;
 
 }
 
@@ -65,44 +65,138 @@ a {
     /* title chiếm hết phần còn lại */
 }
 
-.wp-block-post-date {
+
+
+/* Row chứa date + title */
+.custom-row-date {
     display: flex;
-    flex-direction: column;
-    /* xếp dọc */
+    align-items: flex-start; /* căn top */
+    justify-content: flex-start; /* căn trái */
+    gap: 16px; /* khoảng cách date và title */
+    flex-wrap: nowrap;
+}
+
+/* Date box */
+.date-box.wp-block-post-date {
+    display: flex;
     align-items: center;
-    /* căn giữa ngang */
-
+    justify-content: center;
+    max-width: 120px;
+    padding: 4px 8px;
+    border-bottom: 1px solid #CBD5E1;
+    border-right: 1px solid #CBD5E1;
+    flex-shrink: 0; /* không bị co khi row hẹp */
 }
 
-
-.wp-block-post-date .date-day {
-    color: yellow;
-    font-size: 25px;
+/* Ngày lớn bên trái */
+.date-box .date-day {
+    width: 60px;
+    font-size: 2.5rem;
     font-weight: bold;
-
+    color: #1D4ED8;
+    text-align: center;
+    line-height: 1;
+    margin-right: px!important;
 }
 
-.wp-block-post-date .date-year {
-    padding-left: 50px;
-    /* thụt vào bao nhiêu tùy bạn */
-    font-size: 20px;
+
+.custom-post-2:hover .wp-block-post-title a{
+    color: #1D4ED8;
+
+}
+.custom-post-2:hover .wp-block-post-featured-image img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease; /* thời gian scale mượt */
+}
+
+/* Thiết lập mặc định cho ảnh */
+.wp-block-post-featured-image {
+    overflow: hidden; /* ẩn phần tràn khi scale */
+}
+
+/* Hoặc hover chính ảnh column */
+/*  */
+
+/* .wp-block-post-featured-image img {
+    transition: transform 0.5s ease;
+}
+
+
+/* Tháng và năm bên phải */
+.date-box .date-month,
+.date-box .date-year {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+/* Màu sắc */
+.date-box .date-month {
+    color: #6B7280; /* xám */
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.date-box .date-year {
+    color: #2563EB; /* xanh đậm */
+    font-weight: 500;
+}
+
+/* Tiêu đề bài viết */
+.custom-title {
+    margin: 0;
+    padding-top: 0;
+    font-size: 1.25rem;
+}
+
+/* Categories */
+.taxonomy-category {
+    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #6B7280;
+    font-weight: bold;
+}
+
+.taxonomy-category a {
+    color: #6B7280;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+/* 
+/* Container ảnh */
+
+.wp-block-post-featured-image {
+    width: 100%;
+    height: 40vh;
+    /* hoặc 50vh */
+    overflow: hidden;
+}
+
+.custom-images{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.custom-post-2 {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .wp-block-post-featured-image img {
+    width: 100%;
+    height: 100%;
+    /* khớp container */
+    object-fit: cover;
+    /* cắt vừa khung, không méo ảnh */
+    display: block;
     transform: scale(1);
     transition: transform 0.5s ease-in-out;
-
 }
 
-.img-holder figure {
-    overflow: hidden !important;
-}
+/* Hover zoom */
 
-
-.wp-block-post-featured-image:hover img {
-    transform: scale(1.1);
-    overflow: hidden;
-}
 
 /*
  * Progressive enhancement to reduce widows and orphans
