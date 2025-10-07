@@ -20,11 +20,13 @@
 		<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
 			<!-- wp:site-title {"level":0} /-->
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
+			
 			<div class="wp-block-group">
 				<!-- wp:navigation {"overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} /-->
 			</div>
 			<!-- /wp:group -->
 		</div>
+		
 		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
