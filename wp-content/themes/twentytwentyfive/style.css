@@ -111,6 +111,61 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
    top: 3px;
    left:-15px
 }
+/* Form bao quanh */
+.border-search {
+    position: relative;
+    width: 100%;
+    background: #F5EFE0;
+    max-width: 600px;
+    padding: 30px 30px; /* tùy bạn muốn thanh dài bao nhiêu */
+    margin: 0 auto;
+  }
+  
+  /* Input chính */
+  .border-search .wp-block-search__input {
+    width: 100%;
+    padding: 30px; /* chừa chỗ bên phải cho nút */
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .border-search .wp-block-search__inside-wrapper {
+    position: relative;
+  }
+  
+  .border-search .wp-block-search__inside-wrapper::before {
+    content: "🔍";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Nút Search bên trong input */
+  .border-search .wp-block-search__button {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background: #28A745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  /* Hiệu ứng hover */
+  .border-search .wp-block-search__button:hover {
+    background: darkred;
+  }
+  
+  
+.search-term {   color: red; /* Màu nổi bật */   font-weight: bold; }
 
   .wp-block-search__input {
     border: 1px solid #ccc;

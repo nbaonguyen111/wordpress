@@ -196,5 +196,17 @@ if (! function_exists('twentytwentyfive_format_binding')) :
 		}
 	}
 
+	function twentytwentyfive_custom_scripts() {
+		wp_enqueue_script(
+			'twentyfive-custom-js', // tên định danh
+			get_stylesheet_directory_uri() . '/custom.js', // đường dẫn tới file JS
+			array(), // dependencies (nếu cần jQuery có thể thêm 'jquery')
+			false, // version
+			true // load ở footer
+		);
+	}
+	add_action('wp_enqueue_scripts', 'twentytwentyfive_custom_scripts');
+	
+
 
 endif;
