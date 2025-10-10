@@ -71,6 +71,58 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     margin: 0;                   /* loại bỏ margin mặc định */
                         /* khoảng cách giữa icon và chữ */
 }
+.hr{
+    border: 1px solid #000000;
+    width: 20px;
+}
+.line-tamgiac {
+    position: relative;
+    width: 100%;
+    height:1px;
+    background: gray;
+    margin: 20px 0;
+  }
+  
+  .line-tamgiac::before {
+    content: "";
+    position: absolute;
+    left: 60px;                /* vị trí đầu trái */
+    top: 50;
+    width: 25px;
+    height: 25px;
+    border-right: none;
+    border: 2px solid gray;
+    background: #FBFAF3;   /* không nền */
+    transform: translateY(-50%) rotate(45deg); /* xoay 45 độ và căn giữa */
+    box-sizing: border-box;    /* đảm bảo kích thước tính cả viền */
+    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  
+.circle-custom {
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    border: 1px solid yellow;
+    background: #F5CE31;
+    font-weight: bold;
+    display: flex;             /* bật flex */
+    align-items: center;        /* căn giữa theo chiều dọc */
+    justify-content: center;    /* căn giữa theo chiều ngang */
+      /* xếp 3 dòng theo chiều dọc */
+    text-align: center;         /* căn chữ giữa */
+  }
+  .day-detail{
+position: relative;
+top: 20px;
+  }
+  .month-detail{
+position: relative;
+bottom: 20px;
+  }
+  .year-detail{
+position: relative;
+right: 15px;
+  }
 .custom-search-btn{
     position: relative;
     left:20px;
