@@ -72,9 +72,12 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
                         /* khoảng cách giữa icon và chữ */
 }
 .hr{
+    position: relative;
+    align-items: center;
     border: 1px solid #000000;
     width: 20px;
 }
+
 .line-tamgiac {
     position: relative;
     width: 100%;
@@ -123,6 +126,25 @@ bottom: 20px;
 position: relative;
 right: 15px;
   }
+
+  .hr2{
+    position: relative;
+    align-items: center;
+    border: 1px solid #000000;
+    width: 15px;
+}
+.day-prevnext{
+position: relative;
+top: 20px;
+}
+  .month-prevnext{
+    position: relative;
+    bottom: 20px;
+  }
+  .year-prevnext{
+position: relative;
+right: 15px;
+  }
 .custom-search-btn{
     position: relative;
     left:20px;
@@ -165,12 +187,19 @@ right: 15px;
 }
 /* Form bao quanh */
 .border-search {
-    position: relative;
     width: 100%;
-    background: #F5EFE0;
-    max-width: 600px;
-    padding: 30px 30px; /* tùy bạn muốn thanh dài bao nhiêu */
-    margin: 0 auto;
+    max-width: none;
+    background: #f3f1de;
+    padding: 30px 20%; /* hoặc padding: 30px 5%; */
+    box-sizing: border-box; /* bắt buộc để padding không phá width */
+}
+
+  .test-border.alignfull {
+    max-width: none !important; /* bỏ max-width từ is-layout-constrained */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   /* Input chính */
