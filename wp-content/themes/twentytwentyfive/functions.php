@@ -9,6 +9,11 @@
  * @subpackage Twenty_Twenty_Five
  * @since Twenty Twenty-Five 1.0
  */
+function custom_comment_button_text($args) {
+    $args['label_submit'] = 'share'; // Thay bằng chữ bạn muốn
+    return $args;
+}
+add_filter('comment_form_defaults', 'custom_comment_button_text');
 
 //Footer #1
 function custom_footer_widgets_init()

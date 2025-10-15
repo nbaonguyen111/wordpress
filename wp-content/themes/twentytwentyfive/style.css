@@ -18,6 +18,97 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
  * Link styles
  * https://github.com/WordPress/gutenberg/issues/42319
  */
+ body.logged-in .wp-block-post-comments-form label[for="comment"] {
+  display: none;  /* nếu muốn bo góc */
+}
+
+body.logged-in #respond::before {
+    content: "Make a Post";
+    display: block;
+    position: relative;
+    display: flex;               /* biến pseudo-element thành flex container */
+    align-items: center;         /* canh dọc giữa */
+    justify-content: center;
+    bottom: 15px;
+    background: #FFFFFF;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    width: 130px;
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+
+/* Chỉ custom form khi user logged-in */
+body.logged-in .wp-block-post-comments-form {
+    background: #eae5e5fa;
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    max-width: 900px;
+    border: 0.5px solid #ccc;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body.logged-in .wp-block-post-comments-form::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    height: 80%;
+    background: rgb(255, 255, 255); /* màu nền mong muốn */
+    border-radius: 0; /* giống form */
+   
+}
+
+body.logged-in .wp-block-post-comments-form textarea#comment {
+    width: 100%;
+    max-width: 100%;
+    height: 20vh;
+    padding: 15px;
+    border-radius: 5px;
+    resize: vertical;  
+    max-height: 100px;    /* chiều cao tối đa */
+    min-height: 120px;    /* chiều cao tối thiểu */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 15px;
+    position: relative; /* để ::after không ảnh hưởng */
+    z-index: 1;
+}
+
+
+
+
+body.logged-in .wp-block-post-comments-form .wp-block-button__link {
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    position: relative;
+    display: block;       /* block để margin hoạt động */
+    margin-left: auto;    /* đẩy sang phải */
+    margin-right: 0;   
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 600;
+}
+body.logged-in .wp-block-post-comments-form .wp-block-button__link:hover {
+    background: darkgreen;
+}
+body.logged-in #reply-title {
+    display: none;
+}
+body.logged-in .logged-in-as{
+    display: none;
+}
+
 
  .wp-block-search {
     display: flex;
