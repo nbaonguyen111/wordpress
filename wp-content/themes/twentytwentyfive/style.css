@@ -113,13 +113,21 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 }
 /* Form bao quanh */
 .border-search {
-    position: relative;
     width: 100%;
-    background: #F5EFE0;
-    max-width: 600px;
-    padding: 30px 30px; /* tùy bạn muốn thanh dài bao nhiêu */
-    margin: 0 auto;
+    max-width: none;
+    background: #f3f1de;
+    padding: 30px 20%; /* hoặc padding: 30px 5%; */
+    box-sizing: border-box; /* bắt buộc để padding không phá width */
+}
+
+  .test-border.alignfull {
+    max-width: none !important; /* bỏ max-width từ is-layout-constrained */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
+  
   
   /* Input chính */
   .border-search .wp-block-search__input {
