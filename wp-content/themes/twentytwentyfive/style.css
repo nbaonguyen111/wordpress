@@ -18,7 +18,41 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
  * Link styles
  * https://github.com/WordPress/gutenberg/issues/42319
  */
+ .day-ls-cs{
+color: white;
+position: relative;
+font-weight: bold;
+top: 20px;
+ }
+ .month-ls-cs{
+    color: white;  
+    bottom: 20px;
+    font-weight: bold;
+    position: relative;
+ }
+ .year-ls-cs{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    right: 15px;
+ }
+.title-ls-cs a{
+    color:white !important;
+}
+.hr3{
+    width: 16px;
+    border: 1px solid #ffffff;
+}
+ .custom-lspost .wp-block-post {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .custom-lspost{
 
+    background: #56BDBF;
+    
+  }
+  
 .custom-cate{
    color: orange;
    background:white;
