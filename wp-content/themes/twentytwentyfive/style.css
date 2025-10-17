@@ -18,6 +18,46 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
  * Link styles
  * https://github.com/WordPress/gutenberg/issues/42319
  */
+
+.custom-cate{
+   color: orange;
+   background:white;
+   position: relative;
+   width: 20%;
+   border: 1px solid white;
+   box-shadow: inset 0 0 0 1px #0003;
+   padding: 20px;
+   overflow: hidden;
+}
+.custom-cate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;      /* phủ hết chiều ngang */
+    height: 8px;      /* độ dày thanh chéo (giống border-top) */
+    background: repeating-linear-gradient(
+      -45deg,          /* góc chéo */
+      black 0 1px,    /* đoạn đen 5px */
+      transparent 1px 3px  /* khoảng trống 5px */
+    );
+  }
+
+.custom-cate .cat-item {
+    position: relative; /* để pseudo-element bám theo item */
+    padding-bottom: 6px; /* tạo khoảng cách với đường kẻ */
+    margin-bottom: 6px;  /* tạo khoảng cách giữa các item */
+}
+.custom-cate .cat-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;               /* nằm sát dưới cùng của item */
+    width: 100%;             /* kéo dài toàn bộ chiều ngang */
+    height: 0.5px;             /* độ dày đường kẻ */
+    background-color: rgb(165, 164, 164); /* màu đường kẻ */
+}
+
  body.logged-in .wp-block-post-comments-form label[for="comment"] {
   display: none;  /* nếu muốn bo góc */
 }
