@@ -61,6 +61,74 @@ top: 20px;
   .morepost-cs{
  
   }
+  .custom-archive {
+    flex: 0 0 280px; /* Chiều rộng cố định 280px */
+    max-width: 280px;
+  }
+  /* ====== PHẦN ARCHIVE TÙY CHỈNH ====== */
+.custom-archive .wp-block-post-template {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột */
+    gap: 0;
+    counter-reset: post;
+    position: relative;
+    left: 10px;
+    
+    font-family: "Times New Roman", serif;
+    padding: 5px 0;
+  }
+  
+  /* Mỗi bài viết */
+  .custom-archive .wp-block-post {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 12px;
+    counter-increment: post;
+  }
+  .xemnhieu-cs{
+    text-decoration: underline #eaacbc;
+    
+    font-weight: bold;
+  }
+  /* Số thứ tự bên trái */
+  .custom-archive .wp-block-post::before {
+    content: counter(post);
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    width: 32px;
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  /* Tiêu đề bài viết */
+  .custom-archive .wp-block-post-title a {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+  
+  .custom-archive .wp-block-post-title a:hover {
+    color: #b30000;
+    text-decoration: underline;
+  }
+  
+  /* Ẩn ngày đăng (nếu không cần) */
+  .custom-archive .wp-block-post-date {
+    display: none;
+  }
+  
+  /* Responsive mobile: chuyển về 1 cột */
+  @media (max-width: 768px) {
+    .custom-archive .wp-block-post-template {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   
 .custom-cate{
    color: orange;
