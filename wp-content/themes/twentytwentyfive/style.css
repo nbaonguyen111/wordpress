@@ -50,7 +50,16 @@ top: 20px;
   .custom-lspost{
 
     background: #56BDBF;
-    
+    position: relative;
+    top:30px;
+    z-index: 1;
+  }
+  .button-more-post{
+    position: relative;
+    top:30px;
+  }
+  .morepost-cs{
+ 
   }
   
 .custom-cate{
