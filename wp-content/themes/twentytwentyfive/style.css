@@ -493,6 +493,7 @@ body.logged-in .logged-in-as{
     align-items: center;
     border: 1px solid #000000;
     width: 20px;
+    left: 70px;
 }
 
 .line-tamgiac {
@@ -534,14 +535,16 @@ body.logged-in .logged-in-as{
   .day-detail{
 position: relative;
 top: 20px;
+      left: 70px;
   }
   .month-detail{
 position: relative;
 bottom: 20px;
+      left: 70px;
   }
   .year-detail{
 position: relative;
-right: 15px;
+right: 40px;
   }
 
   .hr2{
@@ -549,6 +552,7 @@ right: 15px;
     align-items: center;
     border: 1px solid #000000;
     width: 15px;
+
 }
 .day-prevnext{
 position: relative;
