@@ -174,6 +174,22 @@ top: 20px;
  body.logged-in .wp-block-post-comments-form label[for="comment"] {
   display: none;  /* nếu muốn bo góc */
 }
+
+.custom-latest-comments {
+    list-style: none;
+    padding: 0;
+
+}
+.custom-comments-title{
+    text-decoration: underline;
+
+}
+.custom-latest-comments li {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    font-family: "Times New Roman", serif;
+}
+
 /*
 //                       _oo0oo_
 //                      o8888888o
@@ -752,10 +768,8 @@ p {
     display: block;
 }
 
-
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
 section {
     padding: 60px 0;
 }
@@ -771,44 +785,37 @@ section .section-title {
     background: #007b5e !important;
 
 }
-
 #footer .row {
-    justify-content: space-between;
+    justify-content: space-around;
 }
-
 #footer ul li {
     list-style: none;
     position: relative;
-    padding-left: 20px;
-    /* = padding-left của h5 + border-left */
+    padding-left: 20px; /* = padding-left của h5 + border-left */
 }
 
-#footer h5 {
+#footer h5{
     padding-left: 10px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color:#ffffff;
 
 }
-
 #footer .footer-widget p strong {
-    display: block;
-    ;
+    display: block;;
     padding-left: 10px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
     color: #ffffff;
-    font-size: 18px;
-    /* giống h5 */
+    font-size: 18px; /* giống h5 */
     font-weight: 600;
 }
 
 
 #footer .footer-column ul li {
-    list-style: none;
-    /* ẩn dấu chấm mặc định */
+    list-style: none; /* ẩn dấu chấm mặc định */
     position: relative;
     padding-left: 10px;
 
@@ -819,8 +826,7 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -50px;
-    /* chỉnh riêng cho footer 1 */
+    left: -50px; /* chỉnh riêng cho footer 1 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -831,8 +837,7 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -5px;
-    /* chỉnh riêng cho footer 2 */
+    left: -50px; /* chỉnh riêng cho footer 2 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -843,8 +848,7 @@ section .section-title {
     content: "\f101";
     font-family: "FontAwesome";
     position: absolute;
-    left: -50px;
-    /* chỉnh riêng cho footer 3 */
+    left: -40px; /* chỉnh riêng cho footer 3 */
     top: 5px;
     color: #ffffff;
     font-size: 14px;
@@ -858,48 +862,42 @@ section .section-title {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-
-#footer ul.social li {
+#footer ul.social li{
     padding: 3px 0;
 
 }
-
 #footer ul.social li a i {
-    margin-right: 5px;
-    font-size: 25px;
+    margin-right:5px;
+    font-size:25px;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
 }
-
 #footer ul.social li:hover a i {
-    font-size: 30px;
-    margin-top: -10px;
+    font-size:30px;
+    margin-top:-10px;
 }
-
 #footer ul.social li a,
 
-#footer ul.wp-block-categories-list li a {
-    color: #ffffff;
+#footer ul.wp-block-categories-list li a{
+    color:#ffffff;
 
 }
-
-#footer ul.social li a:hover {
-    color: #eeeeee;
+#footer ul.social li a:hover{
+    color:#eeeeee;
 }
-
-#footer ul.wp-block-categories-list li {
+#footer ul.wp-block-categories-list li{
     padding: 3px 0;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
 }
 
-#footer ul.wp-block-page-list li a {
-    color: #ffffff;
+#footer ul.wp-block-page-list li a{
+    color:#ffffff;
 }
 
-#footer ul.wp-block-page-list li {
+#footer ul.wp-block-page-list li{
     padding: 3px 0;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
@@ -908,61 +906,54 @@ section .section-title {
 
 
 
-#footer ul.wp-block-latest-posts__list li a {
-    color: #ffffff;
+#footer ul.wp-block-latest-posts__list li a{
+    color:#ffffff;
 }
 
-#footer ul.wp-block-latest-posts__list li {
+#footer ul.wp-block-latest-posts__list li{
     padding: 3px 0;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
 }
-
-#footer ul.wp-block-categories-list li:hover {
+#footer ul.wp-block-categories-list li:hover{
     padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
+    margin-left:5px;
+    font-weight:700;
 }
-
-#footer ul.wp-block-page-list li:hover {
+#footer ul.wp-block-page-list li:hover{
     padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
+    margin-left:5px;
+    font-weight:700;
 }
-
-#footer ul.wp-block-latest-posts__list li:hover {
+#footer ul.wp-block-latest-posts__list li:hover{
     padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
+    margin-left:5px;
+    font-weight:700;
 }
-
-#footer ul.wp-block-latest-posts__list li a i {
+#footer ul.wp-block-latest-posts__list li a i{
     margin-right: 5px;
 }
-
 #footer ul.wp-block-latest-posts__list li:hover a i {
     font-weight: 700;
 }
 
 /* Category list */
 #footer ul.wp-block-categories-list li a {
-    margin-left: -40px;
-    /* chỉnh thụt lề trái */
+    margin-left: -40px;  /* chỉnh thụt lề trái */
 }
 
 /* Latest posts */
 #footer ul.wp-block-latest-posts__list li a {
-    margin-left: 10px;
-    /* chỉnh khác nếu cần */
+    margin-left: -40px; /* chỉnh khác nếu cần */
 }
 
 /* Page list */
 #footer ul.wp-block-page-list li a {
-    margin-left: -40px;
+    margin-left: -30px;
 }
 
-@media (max-width:767px) {
+@media (max-width:767px){
     #footer h5 {
         padding-left: 0;
         border-left: transparent;

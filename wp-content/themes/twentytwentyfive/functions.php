@@ -14,6 +14,27 @@ function custom_comment_button_text($args) {
     return $args;
 }
 add_filter('comment_form_defaults', 'custom_comment_button_text');
+function custom_latest_comment_texts() {
+    $comments = get_comments([
+        'number' => 3,
+        'status' => 'approve'
+    ]);
+
+    if (empty($comments)) return '<p>Chưa có bình luận nào.</p>';
+
+    $output = '<ul class="custom-latest-comments">';
+    $output .= '<div class="custom-comments-title">Comments</div>';
+    foreach ($comments as $comment) {
+        $comment_link = get_comment_link($comment);
+        $comment_text = esc_html($comment->comment_content);
+
+        $output .= '<li><a href="' . esc_url($comment_link) . '">' . $comment_text . '</a></li>';
+    }
+    $output .= '</ul>';
+
+    return $output;
+}
+add_shortcode('latest_comment_texts', 'custom_latest_comment_texts');
 
 //Footer #1
 function custom_footer_widgets_init()
