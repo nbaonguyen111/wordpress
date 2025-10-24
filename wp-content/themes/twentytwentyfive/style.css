@@ -284,6 +284,44 @@ top: 20px;
     border-left: 2px solid #ddd;
     padding-left: 10px;
 }
+.mdl15-post .wp-block-post {
+    border: none !important;
+    box-shadow: none !important;
+}
+.mdl15-group-post {
+    border-bottom: none !important;
+}
+.mdl15-post{
+    position: relative;
+}
+.mdl15-post:before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #d4d9df;
+    top: 60px;
+    left:210px;
+
+}
+.mdl15-title-post{
+    position: relative;
+
+}
+.mdl15-title-post{
+    color: #37A7FF!important;
+}
+.mdl15-title-post:before{
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: -5.5%;
+    width: 20px;
+    height: 20px;
+}
 
 
 /*
