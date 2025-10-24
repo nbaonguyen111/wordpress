@@ -189,6 +189,102 @@ top: 20px;
     padding: 8px 0;
     font-family: "Times New Roman", serif;
 }
+.mdl13 {
+    flex: 0 0 280px !important;
+    max-width: 280px !important;
+    margin-left: 0 !important;  /* loại bỏ khoảng cách bên trái */
+    padding-left: 0 !important;
+
+}
+
+.mdl13,
+.mdl13.wp-block-query,
+.mdl13 .wp-block-query,
+.mdl13 .wp-block-group,
+.mdl13 * {
+    border: none !important;
+}
+
+.mdl13-title{
+    position: relative;
+    color: gray;
+}
+.mdl13-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;               /* nằm sát dưới cùng của item */
+    width: 10%;             /* kéo dài toàn bộ chiều ngang */
+    height: 0.5px;             /* độ dày đường kẻ */
+    background-color: rgb(165, 164, 164); /* màu đường kẻ */
+}
+.comment-box {
+    margin-top: 30px;
+    font-family: "Times New Roman", serif;
+}
+
+.comment-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+}
+
+.comment-box .media {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.comment-box .media-left {
+    margin-right: 10px;
+    width: 60px;
+}
+
+.comment-box .media-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.comment-box .media-body {
+    flex: 1;
+}
+
+.comment-box .media-heading {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.comment-box .media-heading:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-width: 1px 0 0 1px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    left: -6px;
+}
+
+.comment-box p {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.comment-replies {
+    margin-left: 40px; /* đẩy comment con sang phải */
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+}
+
 
 /*
 //                       _oo0oo_

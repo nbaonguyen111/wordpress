@@ -35,6 +35,76 @@ function custom_latest_comment_texts() {
     return $output;
 }
 add_shortcode('latest_comment_texts', 'custom_latest_comment_texts');
+// ✅ Render block Latest Comments với CSS class riêng
+
+// Shortcode: [custom_comment_list]
+function render_custom_comment_list() {
+    // Lấy tất cả comment cha (parent = 0)
+    $comments = get_comments([
+        'status' => 'approve',
+        'number' => 3,
+        'parent' => 0,
+        'orderby' => 'comment_date_gmt',
+        'order' => 'DESC',
+        'post_id' => get_the_ID(),
+    ]);
+
+    if (empty($comments)) {
+        return '<p>Chưa có bình luận nào.</p>';
+    }
+
+    ob_start();
+    echo '<div class="comment-box">';
+
+
+    foreach ($comments as $comment) {
+        custom_render_comment_tree($comment);
+    }
+
+    echo '</div>';
+    return ob_get_clean();
+}
+add_shortcode('custom_comment_list', 'render_custom_comment_list');
+
+
+// Hàm đệ quy render comment cha + con
+function custom_render_comment_tree($comment, $depth = 0) {
+    ?>
+    <div class="media comment-level-<?php echo $depth; ?>">
+        <div class="media-left">
+            <?php echo get_avatar($comment, 50); ?>
+        </div>
+
+        <div class="media-body">
+            <div class="media-heading">
+                <strong><?php echo esc_html(get_comment_author($comment)); ?></strong>
+<!--                <span class="comment-date">(--><?php //echo get_comment_date('', $comment); ?><!--)</span>-->
+            </div>
+
+            <p><?php echo esc_html(get_comment_text($comment)); ?></p>
+
+            <?php
+            // Lấy các comment con (reply)
+            $replies = get_comments([
+                'status' => 'approve',
+                'parent' => $comment->comment_ID,
+                'orderby' => 'comment_date_gmt',
+                'order' => 'ASC',
+
+            ]);
+
+            if ($replies) {
+                echo '<div class="comment-replies">';
+                foreach ($replies as $reply) {
+                    custom_render_comment_tree($reply, $depth + 1);
+                }
+                echo '</div>';
+            }
+            ?>
+        </div>
+    </div>
+    <?php
+}
 
 //Footer #1
 function custom_footer_widgets_init()
